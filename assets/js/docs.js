@@ -92,14 +92,75 @@ var spy = new Gumshoe('#docs-nav a', {
 /*  Ref: https://github.com/andreknieriem/simplelightbox */
 
 var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
+// var found = -1;
 
+// function search() {
+ 
+// 	var name = document.getElementById("searchForm").elements["searchItem"].value;
+// 	var pattern = name.toLowerCase();
+// 	var targetId = "";
+// 	// var divs = document.getElementsByClassName("docs-article");
+// 	// for (var i = 0; i < divs.length; i++) {
+// 	//    var para = divs[i].getElementsByTagName("h1");
+// 	//    console.log(para);
+// 	//    var index = para[0].innerText.toLowerCase().indexOf(pattern);	   
+// 	//    console.log(index);
+// 	//    if (index == -1){
+// 	// 	   try {
+// 	// 			para = divs[i].getElementsByTagName("p");
+// 	// 			index = para[0].innerText.toLowerCase().indexOf(pattern);	  
+// 	// 	   } catch (error) {
+			   
+// 	// 	   }
+// 	//    }
+// 	//    if (index != -1 && found !=i) {
+// 	// 		targetId = divs[i].id;
+// 	// 		found = i;
+// 	// 		console.log(targetId);
+// 	// 		document.getElementById(targetId).scrollIntoView();
+// 	// 		break;
+// 	//    }
+// 	// }  
+// 	// var divs = document.getElementsByClassName("docs-section");
+// 	// for (var i = 0; i < divs.length; i++) {
+// 	//    var para = divs[i].getElementsByTagName("h2");
+// 	//    console.log(para);
+// 	//    var index = para[0].innerText.toLowerCase().indexOf(pattern);	   
+// 	//    console.log(index);
+// 	//    if (index == -1){
+// 	// 	   try {
+// 	// 			para = divs[i].getElementsByTagName("p");
+// 	// 			index = para[0].innerText.toLowerCase().indexOf(pattern);	  
+// 	// 	   } catch (error) {
+			   
+// 	// 	   }
+// 	//    }
+// 	//    if (index != -1 && found !=i) {
+// 	// 		targetId = divs[i].id;
+// 	// 		found = i;
+// 	// 		console.log(targetId);
+// 	// 		document.getElementById(targetId).scrollIntoView();
+// 	// 		break;
+// 	//    }
+// 	// }  
+// 	var divs = document.querySelectorAll( 'body *' );
+// 	for (var i = 0; i < divs.length; i++) {
+// 		var para = divs[i].getElementsByTagName("p");
+// 		console.log(para);
+// 		try {
+// 				var index = para[0].innerText.toLowerCase().indexOf(pattern);	   
+// 				console.log(index);
+// 		} catch (error) {
+			   
+// 		}
 
-
-
-
-
-
-
-
-
+// 	   if (index != -1 && found !=i && divs[i].id!= null && divs[i].id!= "") {
+// 			targetId = divs[i].id;
+// 			found = i;
+// 			console.log(targetId);
+// 			document.getElementById(targetId).scrollIntoView();
+// 			break;
+// 	   }
+// 	}   
+// }
 
