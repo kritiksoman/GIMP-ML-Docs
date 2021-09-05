@@ -110,6 +110,9 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-11">K-means Clustering</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-12">Deep Image Matting</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-13">Deep Image Coloring</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-14">Detect Objects</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-15">Filter Folder</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-16">Canny Edge</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Citation</a></li>
 				    <!-- <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Section Item 8.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Section Item 8.2</a></li>
@@ -140,6 +143,7 @@
 									<a href="assets/images/GIMP3.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/GIMP3.png" alt="" title="Monodepth plugin example."/></a>
 								</div><!--//col-->
 								
+								
 							</div><!--//gallery-->
 							<a href="https://www.youtube.com/channel/UCzZn99R6Zh0ttGqvZieT4zw" class="btn btn-info"><i class="fas fa-play-circle me-2"></i> YouTube</a> 
 							<a href="https://github.com/login?return_to=%2Fkritiksoman%2FGIMP-ML" class="btn btn-success"><i class="fas fa-code-branch me-2"></i> Fork Now</a>
@@ -156,7 +160,7 @@
 										</span><!--//icon-holder-->
 										Note
 									</h4>
-									<p>GIMP 3 has not been released yet and GIMP-ML is based on <a href="https://www.gimp.org/news/2021/05/08/gimp-2-99-6-released/">GIMP 2.99.6</a>. Having a NVIDIA GPU (for CUDA) is recommeded for usage.</p>
+									<p>GIMP 3 has not been released yet and GIMP-ML is based on <a href="https://www.gimp.org/news/2021/05/08/gimp-2-99-6-released/">GIMP 2.99.6</a>. Having a NVIDIA GPU (for CUDA) is recommeded for usage. Please run on images with smaller resolution or force CPU if CUDA is running of out memory.</p>
 								</div><!--//content-->
 							</div><!--//callout-block-->
 
@@ -359,6 +363,7 @@
 								
 								<!-- ** Embed github code ends ** -->
 							</div><!--//docs-code-block-->
+							
 						</section><!--//docs-intro-->
 				    </header>
 
@@ -630,6 +635,92 @@
 						 </table>
 					</section><!--//section-->
 
+
+					<section class="docs-section" id="item-7-14">
+						<h2 class="section-heading">Detect Objects</h2>
+						<table>
+							<tr>
+							   <td>Detects objects present in the current layer. Objects have to be from one of the class in COCO dataset. <br>
+								<div class="callout-block callout-block-info">
+									<div class="content">
+										<h4 class="callout-title">
+											<span class="callout-icon-holder me-1">
+												<i class="fas fa-info-circle"></i>
+											</span><!--//icon-holder-->
+											Note
+										</h4>
+										<p>
+											COCO Class: person|bicycle|car|motorbike|aeroplane|bus|<br>train|truck|boat|traffic light|fire hydrant|stop sign|parking meter<br>|bench|bird|cat|dog|horse|sheep|cow|elephant|bear|zebra|<br>giraffe|backpack|umbrella|handbag|tie|suitcase|frisbee|skis|<br>
+											snowboard|sports ball|kite|baseball bat|baseball glove|<br>skateboard|surfboard|tennis racket|bottle|wine glass|cup|fork|knife|<br>spoon|bowl|banana|apple|sandwich|orange|broccoli|carrot<br>|hot dog|pizza|donut|cake|chair|sofa|pottedplant|bed|diningtable|<br>
+											toilet|tvmonitor|laptop|mouse|remote|keyboard|cell phone|<br>microwave|oven|toaster|sink|refrigerator|book|clock|vase|scissors|<br>teddy bear|hair drier|toothbrush
+										</p>
+									</div><!--//content-->
+								</div><!--//callout-block-->
+								</td>
+							   <td>								
+								<iframe width="600" height="400"
+								src="https://www.youtube.com/embed/Ptg8O0JhVkg"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+								</iframe><br></td>
+							</tr>
+						 </table>
+						
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-7-15">
+						<h2 class="section-heading">Filter Folder</h2>
+						<table>
+							<tr>
+							   <td>Moves files in a folder to a separate folder based on objects present in them. Objects must be from one of the class in COCO dataset. Objects to search should be pipeline separated list of classes.<br>
+								<div class="callout-block callout-block-info">
+									<div class="content">
+										<h4 class="callout-title">
+											<span class="callout-icon-holder me-1">
+												<i class="fas fa-info-circle"></i>
+											</span><!--//icon-holder-->
+											Note
+										</h4>
+										<p>
+											COCO Class: person|bicycle|car|motorbike|aeroplane|bus|<br>train|truck|boat|traffic light|fire hydrant|stop sign|parking meter<br>|bench|bird|cat|dog|horse|sheep|cow|elephant|bear|zebra|<br>giraffe|backpack|umbrella|handbag|tie|suitcase|frisbee|skis|<br>
+											snowboard|sports ball|kite|baseball bat|baseball glove|<br>skateboard|surfboard|tennis racket|bottle|wine glass|cup|fork|knife|<br>spoon|bowl|banana|apple|sandwich|orange|broccoli|carrot<br>|hot dog|pizza|donut|cake|chair|sofa|pottedplant|bed|diningtable|<br>
+											toilet|tvmonitor|laptop|mouse|remote|keyboard|cell phone|<br>microwave|oven|toaster|sink|refrigerator|book|clock|vase|scissors|<br>teddy bear|hair drier|toothbrush
+										</p>
+									</div><!--//content-->
+								</div><!--//callout-block-->
+							   </td>
+							   <td>								
+								<iframe width="600" height="400"
+								src="https://www.youtube.com/embed/3O5Y8CwjjIo"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+								</iframe><br></td>
+							</tr>
+						 </table>
+						
+					</section><!--//section-->
+
+
+					<section class="docs-section" id="item-7-16">
+						<h2 class="section-heading">Canny Edge</h2>
+						<table>
+							<tr>
+							   <td>Apply canny edge detector to the current selected layer. <br>
+								
+							   </td>
+							   <td>								
+								<iframe width="600" height="400"
+								src="https://www.youtube.com/embed/0WUVTSIMF5w"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+								</iframe><br></td>
+							</tr>
+						 </table>
+						
+					</section><!--//section-->
 				</article><!--//docs-article-->
 			    
 			    
